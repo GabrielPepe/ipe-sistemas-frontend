@@ -7,6 +7,7 @@ export default {
         primary: "#00AAFF",
         secondary: "#CCDDFF",
         tertiary: "#1F8FC7",
+        quaternary: "#0D3448",
       },
       fontFamily: {
         sans: "Inter",
