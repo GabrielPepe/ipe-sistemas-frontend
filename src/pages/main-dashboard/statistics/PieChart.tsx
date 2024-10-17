@@ -2,7 +2,7 @@ import { ResponsivePie } from "@nivo/pie";
 
 export const PieChart = ({ data }: any) => (
   <div>
-    <span className="font-bold text-4xl">Maior lucratividade potencial</span>
+    <span className="font-bold text-4xl">Maior valor alocado por produto</span>
     <ResponsivePie
       data={data}
       margin={{ top: 40, right: 80, bottom: 80, left: -40 }}
