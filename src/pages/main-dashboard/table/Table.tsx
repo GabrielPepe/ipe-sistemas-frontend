@@ -1,7 +1,6 @@
 import { ArrowDown } from "lucide-react";
-import { mockItems } from "./mockData";
 
-const mockColumns = [
+const columns = [
   "Cod. Barras",
   "Nome",
   "V. Compra",
@@ -10,14 +9,14 @@ const mockColumns = [
   "Estoque",
 ];
 
-const Table = () => {
+const Table = ({ tableItems }: TableProps) => {
   return (
     <table className="max-h-[40rem] w-full gap-6">
       <thead>
         <tr className="">
-          {mockColumns.map((item) => {
+          {columns.map((item, index) => {
             return (
-              <th>
+              <th key={index}>
                 <div className="flex justify-center gap-1">
                   {item} <ArrowDown className="text-primary" />
                 </div>
@@ -27,9 +26,9 @@ const Table = () => {
         </tr>
       </thead>
       <tbody className="border-x-2 border-y-4 border-tertiary text-2xl">
-        {mockItems.map((item) => {
+        {tableItems.map((item, index) => {
           return (
-            <tr className="">
+            <tr key={index}>
               <th>
                 <div className="py-3 ml-12">
                   <div className="flex font-medium border-r-2 border-primary">
